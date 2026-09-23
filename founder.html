@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apostle Peter Otieno Angir — Miracle and Deliverance Ministry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root{
+    --indigo:#1E3A5F;
+    --indigo-deep:#122842;
+    --green:#3FA66B;
+    --green-deep:#2E7F52;
+    --teal:#2E7D6B;
+    --ivory:#FAF6EE;
+    --paper:#FFFFFF;
+    --ink:#2B2620;
+    --ink-soft:#5B564C;
+    --line:#E7E0D2;
+    --radius-s:6px;
+    --radius-m:10px;
+    --maxw:1160px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    background:var(--ivory);
+    line-height:1.5;
+  }
+  h1,h2,h3{
+    font-family:'Lora',serif;
+    margin:0;
+    color:var(--indigo);
+    font-weight:600;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  :focus-visible{outline:3px solid var(--green-deep);outline-offset:2px;}
+  header{
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:50;
+  }
+  .header-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:8px 32px;max-width:var(--maxw);margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-logo{height:108px;width:auto;flex-shrink:0;}
+  .brand-mark{
+    width:42px;height:42px;border-radius:50%;
+    background:conic-gradient(from 210deg,var(--indigo),var(--green),var(--indigo));
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-family:'Lora',serif;font-weight:700;font-size:15px;
+    flex-shrink:0;
+  }
+  .brand-name{
+    font-family:'Lora',serif;font-weight:600;font-size:19px;color:var(--indigo);
+    line-height:1.2;
+  }
+  .brand-name span{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:12px;color:var(--ink-soft);letter-spacing:.02em;}
+  nav{display:flex;align-items:center;gap:6px;}
+  nav ul{list-style:none;display:flex;gap:2px;margin:0;padding:0;}
+  nav li{position:relative;}
+  nav a.nav-link{
+    display:flex;align-items:center;gap:5px;
+    padding:10px 14px;border-radius:var(--radius-s);
+    font-size:15px;font-weight:500;color:var(--ink);
+    transition:background .15s ease, color .15s ease;
+  }
+  nav a.nav-link:hover{background:var(--ivory);color:var(--indigo);}
+  nav .active{color:var(--indigo);font-weight:600;}
+  nav .active::after{
+    content:"";position:absolute;left:14px;right:14px;bottom:2px;height:2px;background:var(--green);
+  }
+  nav .caret{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-3px;opacity:.6;}
+  .dropdown{position:relative;}
+  .dropdown-menu{
+    position:absolute;top:calc(100% + 6px);left:0;
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);
+    box-shadow:0 12px 28px rgba(30,42,74,.12);
+    min-width:200px;padding:6px;
+    opacity:0;visibility:hidden;transform:translateY(-6px);
+    transition:opacity .15s ease, transform .15s ease, visibility .15s;
+  }
+  .dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{
+    opacity:1;visibility:visible;transform:translateY(0);
+  }
+  .dropdown-menu a{
+    display:block;padding:9px 12px;border-radius:6px;font-size:14.5px;color:var(--ink);
+  }
+  .dropdown-menu a:hover{background:var(--ivory);color:var(--indigo);}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:11px 22px;border-radius:var(--radius-s);
+    font-family:'Inter',sans-serif;font-weight:600;font-size:15px;
+    border:1.5px solid transparent;cursor:pointer;
+    transition:transform .12s ease, box-shadow .12s ease, background .15s ease;
+    white-space:nowrap;
+  }
+  .btn:active{transform:translateY(1px);}
+  .btn-primary{background:var(--green);color:var(--indigo-deep);}
+  .btn-primary:hover{background:var(--green-deep);}
+  .btn-outline{background:transparent;border-color:var(--indigo);color:var(--indigo);}
+  .btn-outline:hover{background:var(--indigo);color:#fff;}
+  .btn-outline-light{background:transparent;border-color:rgba(255,255,255,.7);color:#fff;}
+  .btn-outline-light:hover{background:rgba(255,255,255,.12);}
+  .btn-ghost{background:transparent;color:var(--indigo);padding:11px 6px;font-weight:600;}
+  .btn-ghost:hover{color:var(--green-deep);}
+  .btn-ghost .arrow{transition:transform .15s ease;}
+  .btn-ghost:hover .arrow{transform:translateX(3px);}
+  .header-cta{display:flex;align-items:center;gap:18px;}
+  section{padding:88px 0;}
+  .section-head{
+    display:flex;justify-content:space-between;align-items:flex-end;gap:24px;
+    margin-bottom:44px;flex-wrap:wrap;
+  }
+  .section-head h2{font-size:32px;}
+  .section-head p{color:var(--ink-soft);font-size:16px;margin-top:8px;max-width:480px;}
+  .kicker{color:var(--teal);font-weight:600;font-size:14px;margin-bottom:10px;}
+  footer{background:var(--ink);color:rgba(255,255,255,.7);padding:56px 0 28px;}
+  .footer-grid{
+    display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px;
+  }
+  .footer-brand h3{color:#fff;font-size:19px;margin-bottom:10px;}
+  .footer-brand p{font-size:14px;line-height:1.6;max-width:280px;color:rgba(255,255,255,.55);}
+  .footer-col h4{color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;margin-bottom:14px;letter-spacing:.01em;}
+  .footer-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
+  .footer-col a{font-size:14px;color:rgba(255,255,255,.65);}
+  .footer-col a:hover{color:var(--green);}
+  .social-row{display:flex;gap:10px;margin-top:16px;}
+  .social-row a{
+    width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.08);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .social-row svg{width:16px;height:16px;stroke:#fff;}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);padding-top:22px;
+    display:flex;justify-content:space-between;font-size:13px;color:rgba(255,255,255,.45);flex-wrap:wrap;gap:10px;
+  }
+  .founder-bio{max-width:720px;}
+  .founder-bio p{margin-bottom:16px;font-size:15.5px;line-height:1.7;color:var(--ink-soft);}
+  .founder-bio h2{margin-bottom:16px;font-size:28px;}
+  .founder-photo{
+    width:160px;height:160px;border-radius:50%;
+    background:linear-gradient(150deg,#4a5a86,#2a3556);
+    display:flex;align-items:center;justify-content:center;
+    color:rgba(255,255,255,.5);font-size:14px;text-align:center;margin-bottom:24px;
+    border:3px solid var(--green);
+  }
+  .back-link{display:inline-block;margin-bottom:24px;font-size:14px;color:var(--teal);font-weight:600;}
+  .back-link:hover{color:var(--green-deep);}
+  @media (max-width:980px){
+    nav ul{display:none;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    .header-inner{padding:14px 20px;}
+    .wrap{padding-left:20px;padding-right:20px;}
+    section{padding:56px 0;}
+    .footer-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABOYAAATmCAIAAAAKnjl9AABcQWNhQlgAAFxBanVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAXBtqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOmRmNjA5ODQxLTNiOWYtNGY1MS05ZjZjLTgxZTk3NWRiNmNjZQAAAAxXanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAAJ0Wp1bWIAAAA7anVtZEDLDDK7ikidpwsq1vR/Q2kTYzJwYS5pY29uAAAAABhjMnNo+rYme+zhdKcrKNm7aX3mdwAAABdiZmRiAGltYWdlL3N2Zyt4bWwAAAAJd2JpZGI8c3ZnIHdpZHRoPSI3MTYiIGhlaWdodD0iNzE2IiB2aWV3Qm94PSIwIDAgNzE2IDcxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUwOC43NDkgMzE3LjM5OUM1MTYuNzc3IDI4Ny4zMTQgNTA4Ljk5MSAyNTMuODg0IDQ4NS4zODkgMjMwLjI4MkM0NjEuNzg4IDIwNi42ODEgNDI4LjM2IDE5OC44OTUgMzk4LjI3MyAyMDYuOTIzQzM3Ni4yMzEgMTg0LjkyOCAzNDMuMzkgMTc0Ljk1NiAzMTEuMTQ4IDE4My41OTZDMjc4LjkwNiAxOTIuMjM0IDI1NS40NSAyMTcuMjkyIDI0Ny4zNiAyNDcuMzYxQzIxNy4yOTEgMjU1LjQ1MSAxOTIuMjMzIDI3OC45MSAxODMuNTk1IDMxMS4xNDlDMTc0Ljk1NyAzNDMuMzkxIDE4NC45MjcgMzc2LjIzMiAyMDYuOTI0IDM5OC4yNzRDMTk4Ljg5NiA0MjguMzU5IDIwNi42ODMgNDYxLjc4OSAyMzAuMjg0IDQ4NS4zOTFDMjUzLjg4NSA1MDguOTkyIDI4Ny4zMTMgNTE2Ljc3OSAzMTcuNDAxIDUwOC43NUMzMzkuNDQyIDUzMC43NDUgMzcyLjI4NiA1NDAuNzE3IDQwNC41MjUgNTMyLjA3OUM0MzYuNzY3IDUyMy40NDEgNDYwLjIyMyA0OTguMzg0IDQ2OC4zMTMgNDY4LjMxNUM0OTguMzgzIDQ2MC4yMjQgNTIzLjQ0IDQzNi43NjYgNTMyLjA3OCA0MDQuNTI2QzU0MC43MTYgMzcyLjI4NSA1MzAuNzQ3IDMzOS40NDMgNTA4Ljc0OSAzMTcuNDAyVjMxNy4zOTlaTTQ3MC44OTkgMjQ0Ljc3NkM0ODYuODkyIDI2MC43NyA0OTMuNDg4IDI4Mi42MDEgNDkwLjY4NyAzMDMuNDEyTDQxNS41NzcgMjYwLjA0NkM0MTIuNDExIDI1OC4yMTggNDA4LjUwOSAyNTguMjE4IDQwNS4zNDUgMjYwLjA0NkwzMTcuNDAxIDMxMC44MlYyNzcuNTI2QzMxNy40MDEgMjc1LjE5MSAzMTguNjUyIDI3My4wMDUgMzIwLjY3NiAyNzEuODM3TDM4Ny42NDQgMjMzLjE3NEM0MTQuMTc4IDIxOC4zNTMgNDQ4LjM0NiAyMjIuMjIzIDQ3MC45MDEgMjQ0Ljc3Nkg0NzAuODk5Wk0zNTcuODM3IDMxMS4xNDRMMzk4LjI3NSAzMzQuNDkxVjM4MS4xODVMMzU3LjgzNyA0MDQuNTMyTDMxNy4zOTggMzgxLjE4NVYzMzQuNDkxTDM1Ny44MzcgMzExLjE0NFpNMjY0Ljc3NiAyNjkuNjkzQzI2NS4yMDcgMjM5LjMwNSAyODUuNjQ0IDIxMS42NDkgMzE2LjQ1MyAyMDMuMzkzQzMzOC4zIDE5Ny41NCAzNjAuNTA1IDIwMi43NDQgMz... (line truncated to 2000 chars)" alt="MDM Logo">
+    </div>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="dropdown">
+          <a class="nav-link" href="ministries.html" aria-haspopup="true">Our Ministries <span class="caret"></span></a>
+          <div class="dropdown-menu">
+            <a href="ministries.html#evangelism">Evangelism</a>
+            <a href="ministries.html#prayer">Prayer Ministry</a>
+            <a href="ministries.html#community">Community Outreach</a>
+            <a href="ministries.html#youth">Youth Ministry</a>
+            <a href="ministries.html#music">Music Ministry</a>
+            <a href="ministries.html#online">Online Evangelism</a>
+            <a href="ministries.html#pastoral">Pastoral Care</a>
+            <a href="ministries.html#new-beginning">New Beginning</a>
+          </div>
+        </li>
+        <li><a class="nav-link active" href="founder.html">Apostle Peter</a></li>
+        <li><a class="nav-link" href="testimonies.html">Testimonies</a></li>
+        <li><a class="nav-link" href="index.html#values">Our Values</a></li>
+        <li><a class="nav-link" href="prayer.html">Prayer Request</a></li>
+        <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="prayer.html" class="btn btn-primary">Prayer Request</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <a href="index.html" class="back-link">← Back to Home</a>
+    <div class="founder-bio">
+      <div class="kicker">Founder &amp; Minister</div>
+      <h2>Apostle Peter Otieno Angir</h2>
+      <div class="founder-photo">Founder<br>&amp; Minister</div>
+      <p>Apostle Peter Otieno Angir is a Christian minister, evangelist, preacher, and founder of Miracle and Deliverance Ministry in Kenya.</p>
+      <p>His journey of faith began in 1996 when he gave his life to Jesus Christ.</p>
+      <p>Having experienced difficult seasons in his own life, Apostle Peter developed a passion for encouraging people who are struggling and reminding them that difficult circumstances do not have to determine their future.</p>
+      <p>His ministry journey has included preaching, prayer, fasting, evangelism, crusades, home prayer visits, church ministry, and community outreach.</p>
+      <p>He has also pursued training in Christian ministry and areas including pastoral care, chaplaincy, mediation, prayer ministry, and ministry leadership.</p>
+      <p>Apostle Peter currently uses both physical ministry and online platforms to share the Gospel and encourage people internationally.</p>
+      <p>His message emphasizes faith in God, prayer, the Word of God, salvation, humility, and serving others.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Miracle and Deliverance Ministry</h3>
+        <p>A Christian ministry based in Homa Bay County, Kenya, founded by Apostle Peter Otieno Angir. We share the Gospel, encourage people in their faith, and serve vulnerable communities through prayer, outreach, and practical assistance.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M22 12s0-3.2-.4-4.7a2.9 2.9 0 0 0-2-2C17.9 5 12 5 12 5s-5.9 0-7.6.3a2.9 2.9 0 0 0-2 2C2 8.8 2 12 2 12s0 3.2.4 4.7a2.9 2.9 0 0 0 2 2C6.1 19 12 19 12 19s5.9 0 7.6-.3a2.9 2.9 0 0 0 2-2C22 15.2 22 12 22 12z"/><path d="M10 9l5 3-5 3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="ministries.html">Our Ministries</a></li>
+          <li><a href="testimonies.html">Testimonies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get involved</h4>
+        <ul>
+          <li><a href="prayer.html">Prayer request</a></li>
+          <li><a href="#">Volunteer</a></li>
+          <li><a href="#">Partner with us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>Homa Bay County, Kenya</li>
+          <li>peterotienoangir21@gmail.com</li>
+          <li>+254 724 330 168</li>
+          <li>+254 739 441 075</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Miracle and Deliverance Ministry. All rights reserved.</span>
+      <span>Christian Ministry · Homa Bay County, Kenya</span>
+    </div>
+  </div>
+</footer>
+<script src="template.js"></script>
+</body>
+</html>
